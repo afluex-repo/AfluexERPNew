@@ -9,7 +9,7 @@ document.write(`
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="#">
     <meta name="description" content="#">
-    <title>Ocean Advertising</title>
+    <title>Afluex Advertising</title>
     <!--Fav and touch icons-->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon.ico">
@@ -61,10 +61,10 @@ document.write(`
                                 <a href="tel:9897850359" class ="text-custom-white"><i class ="fas fa-phone-alt text-custom-blue"></i> +91 989 785 0359</a>
                             </li>
                             <li>
-                                <a href="mailto:info@domain.com" class ="text-custom-white"><i class ="fas fa-envelope text-custom-blue"></i> oceanad359@yahoo.com</a>
+                                <a href="info@afluex.com" class ="text-custom-white"><i class ="fas fa-envelope text-custom-blue"></i>info@afluex.com</a>
                             </li>
                             <li>
-                                <a href="#" class ="text-custom-white"><i class ="fas fa-map-marker-alt text-custom-blue"></i>Ocean Advertising, Agra</a>
+                                <a href="#" class ="text-custom-white"><i class ="fas fa-map-marker-alt text-custom-blue"></i>Afluex Advertising, Agra</a>
                             </li>
                         </ul>
                     </div>

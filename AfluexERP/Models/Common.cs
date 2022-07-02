@@ -150,9 +150,9 @@ namespace AfluexERP.Models
 
     public class CompanyProfile
     {
-        static public string CompanyName = "Ocean Advertising";
-        static public string CompanyMobile = "9897850359";
-        static public string CompanyEmail = " oceanad359@yahoo.com";
+        static public string CompanyName = "Afluex Advertising";
+        static public string CompanyMobile = "73100 00412";
+        static public string CompanyEmail = " info@afluex.com";
         static public string CompanyAddress = "D-54,Second Floor, Arjun Tower,Near OLA Office,Vibhuti Khand,Gomti Nagar, Lucknow";
         static public string BankName = "IndusInd Bank Limited";
         static public string AccountNo = "201001661706";
