@@ -56,10 +56,10 @@ document.write(`
                         <br>
                         <ul class ="custom ">
                             <li>
-                                <a href="#" class ="text-custom-blue"><i class ="fas fa-phone-alt"></i></a> <a class ="text-custom-white" href="tel:9897850359"> &nbsp; &nbsp; 9897850359</a>
+                                <a href="#" class ="text-custom-blue"><i class ="fas fa-phone-alt"></i></a> <a class ="text-custom-white" href="tel:9897850359"> &nbsp; &nbsp; 73100 00412</a>
                             </li>
                             <li>
-                                <a href="#" class ="text-custom-blue"><i class ="fas fa-envelope"></i></a> <a class ="text-custom-white" href="mailto:oceanad359@yahoo.com"> &nbsp; &nbsp; oceanad359@yahoo.com</a>
+                                <a href="#" class ="text-custom-blue"><i class ="fas fa-envelope"></i></a> <a class ="text-custom-white" href="info@afluex.com"> &nbsp; &nbsp; info@afluex.com</a>
                             </li>
 
                         </ul>
@@ -73,7 +73,7 @@ document.write(`
         <div class ="container">
             <div class ="row">
                 <div class ="col-lg-12">
-                    <p class ="text-custom-white no-margin">Ocean Advertising -2022 | All Right Reserved.<a href="#" target="_blank" class ="text-custom-white">Designed By Afluex</a></p>
+                    <p class ="text-custom-white no-margin">Afluex Advertising -2022 | All Right Reserved.<a href="#" target="_blank" class ="text-custom-white">Designed By Afluex</a></p>
                 </div>
             </div>
         </div>
