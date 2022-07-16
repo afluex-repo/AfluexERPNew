@@ -211,3 +211,4 @@ F:\Ashwani Afluex\repository\AfluexERPNew\AfluexERP\bin\System.Web.Http.xml
 F:\Ashwani Afluex\repository\AfluexERPNew\AfluexERP\bin\System.Web.Http.WebHost.xml
 F:\Ashwani Afluex\repository\AfluexERPNew\AfluexERP\obj\Debug\AfluexERP.dll
 F:\Ashwani Afluex\repository\AfluexERPNew\AfluexERP\obj\Debug\AfluexERP.pdb
+F:\Ashwani Afluex\repository\AfluexERPNew\AfluexERP\obj\Debug\AfluexERP.csprojResolveAssemblyReference.cache

@@ -57,6 +57,8 @@ namespace AfluexERP.Models
         public string MediaVehicleName { get; set; }
         public string SaleOrderNoEncrypt { get; set; }
         public List<PO> lstPO { get; set; }
+
+        public string FinancialYear { get; set; }
         #endregion
 
         public DataSet GetOperationExecutiveList()
@@ -88,7 +90,8 @@ namespace AfluexERP.Models
 
         public DataSet GeneratePurchaseOrderNo()
         {
-            SqlParameter[] para = { new SqlParameter("@AddedBy", AddedBy), };
+            SqlParameter[] para = { new SqlParameter("@AddedBy", AddedBy),
+                                    new SqlParameter("@FinancialYearName", FinancialYear) };
             DataSet ds = DBHelper.ExecuteQuery("GeneratePurchaseOrderNo", para);
             return ds;
         }
@@ -133,6 +136,12 @@ namespace AfluexERP.Models
             return ds;
         }
         #endregion
+
+        public DataSet GetFinancialYearList()
+        {
+            DataSet ds = DBHelper.ExecuteQuery("GetFinancialYearList");
+            return ds;
+        }
 
     }
 }

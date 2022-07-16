@@ -111,13 +111,14 @@ namespace AfluexERP.Models
         #region InvoiceNo
         public DataSet GenerateInvoiceNo()
         {
-            SqlParameter[] para = { new SqlParameter("@AddedBy", AddedBy), };
+            SqlParameter[] para = { new SqlParameter("@AddedBy", AddedBy),
+                                    new SqlParameter("@FinancialYearName", FinancialYear) };
             DataSet ds = DBHelper.ExecuteQuery("GenerateInvoiceNo", para);
             return ds;
         }
         public DataSet GetInvoiceNoList()
         {
-            SqlParameter[] para = { new SqlParameter("@InvoiceNo", InvoiceNo), };
+            SqlParameter[] para = { new SqlParameter("@InvoiceNo", InvoiceNo),};
             DataSet ds = DBHelper.ExecuteQuery("GetInvoiceNoList", para);
             return ds;
         }
@@ -426,7 +427,6 @@ namespace AfluexERP.Models
 
         public DataSet GetFinancialYearList()
         {
-          
             DataSet ds = DBHelper.ExecuteQuery("GetFinancialYearList");
             return ds;
         }
