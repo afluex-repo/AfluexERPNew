@@ -104,6 +104,8 @@ namespace AfluexERP.Models
         public string CompanyMobile { get;  set; }
         public string Email { get;  set; }
         public string OtherCharges { get; set; }
+
+        public string FinancialYear { get; set; }
         #endregion
 
         #region InvoiceNo
@@ -186,7 +188,8 @@ namespace AfluexERP.Models
         }
         public DataSet GenerateSalesOrderNo()
         {
-            SqlParameter[] para = { new SqlParameter("@AddedBy", AddedBy), };
+            SqlParameter[] para = { new SqlParameter("@AddedBy", AddedBy),
+            new SqlParameter("@FinancialYearName", FinancialYear),};
 
             DataSet ds = DBHelper.ExecuteQuery("GenerateSalesOrderNo", para);
             return ds;
@@ -420,6 +423,13 @@ namespace AfluexERP.Models
             DataSet ds = DBHelper.ExecuteQuery("GetSOMappedInvoice", para);
             return ds;
         }
-        
+
+        public DataSet GetFinancialYearList()
+        {
+          
+            DataSet ds = DBHelper.ExecuteQuery("GetFinancialYearList");
+            return ds;
+        }
+
     }
 }

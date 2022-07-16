@@ -50,6 +50,26 @@ namespace AfluexERP.Controllers
             SaleOrder obj = new SaleOrder();
             List<SaleOrder> lst = new List<SaleOrder>();
 
+            #region ddlFinancialYear
+            int count1 = 0;
+            List<SelectListItem> ddlFinancialYear = new List<SelectListItem>();
+            DataSet ds1 = obj.GetFinancialYearList();
+            if (ds1 != null && ds1.Tables.Count > 0 && ds1.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow r in ds1.Tables[0].Rows)
+                {
+                    //if (count1 == 0)
+                    //{
+                    //    ddlFinancialYear.Add(new SelectListItem { Text = "Select Financial Year", Value = "0" });
+                    //}
+                    ddlFinancialYear.Add(new SelectListItem { Text = r["FinancialYear"].ToString(), Value = r["FinancialYear"].ToString() });
+                    count1 = count1 + 1;
+
+                }
+            }
+            ViewBag.ddlFinancialYear = ddlFinancialYear;
+            #endregion
+
             DataSet ds = obj.SalesOrderNoList();
             if (ds != null && ds.Tables[0].Rows.Count > 0)
             {
@@ -78,6 +98,26 @@ namespace AfluexERP.Controllers
         public ActionResult CreateSaleOrder(SaleOrder obj)
         {
             obj.AddedBy = Session["UserID"].ToString();
+
+            #region ddlFinancialYear
+            int count1 = 0;
+            List<SelectListItem> ddlFinancialYear = new List<SelectListItem>();
+            DataSet ds1 = obj.GetFinancialYearList();
+            if (ds1 != null && ds1.Tables.Count > 0 && ds1.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow r in ds1.Tables[0].Rows)
+                {
+                    //if (count1 == 0)
+                    //{
+                    //    ddlFinancialYear.Add(new SelectListItem { Text = "Select Financial Year", Value = "0" });
+                    //}
+                    ddlFinancialYear.Add(new SelectListItem { Text = r["FinancialYear"].ToString(), Value = r["FinancialYear"].ToString() });
+                    count1 = count1 + 1;
+
+                }
+            }
+            ViewBag.ddlFinancialYear = ddlFinancialYear;
+            #endregion
 
             DataSet ds = obj.GenerateSalesOrderNo();
             if (ds != null && ds.Tables.Count > 0)
