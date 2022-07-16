@@ -75,49 +75,8 @@
                                         <div class="form-group row">
                                             <div class="col-md-12">
                                                 <label class="control-label">Vendor </label>
-                                                <select class="form-select" id="VendorID" name="VendorID">
-                                                    <option value="0">Select</option>
-                                                    <option value="2">Suraj Media Solution-Unnao</option>
-                                                    <option value="3">Mediascope Advertising-Kalyanpur</option>
-                                                    <option value="6">Metro Printing &amp; Outdoor-Ballia</option>
-                                                    <option value="7">Vision Advertisers-Sitapur</option>
-                                                    <option value="8">Aziz Art-Basti</option>
-                                                    <option value="12">Shri Ram Communication-Ghazipur</option>
-                                                    <option value="13">Media Trade wings-Shanti Nagar</option>
-                                                    <option value="14">SELVEL MEDIA SERVICES PRIVATE LIMITED-Lucknow</option>
-                                                    <option value="15">Divyanshi Creations-Lucknow</option>
-                                                    <option value="16">BELIEF MEDIA SOLUTIONS -Sitapur</option>
-                                                    <option value="17">YASH ADVERTISING-Varanasi</option>
-                                                    <option value="21">Saffron Communication Pvt Ltd-Lucknow</option>
-                                                    <option value="31">test34-Lucknow</option>
-                                                    <option value="32">vendor Pan Img-Lucknow</option>
-                                                    <option value="9">Prakash Publicity-NA</option>
-                                                    <option value="33">test vendor Session-Lucknow</option>
-                                                    <option value="39">Balaji Media -Jaunpur</option>
-                                                    <option value="43">rama Flex Printing-Sadar</option>
-                                                    <option value="4">Ruby Printing-Faizabad</option>
-                                                    <option value="5">SPPL Star Publicity Private Limited-Lucknow</option>
-                                                    <option value="18">CHHAGAN LAL SANCHETI-Dhanbad</option>
-                                                    <option value="25">JMD Enterprises-Lucknow</option>
-                                                    <option value="10">Amar Ujala Publications Limited-Noida</option>
-                                                    <option value="11"> Be Global Adworld -Gorakhpur</option>
-                                                    <option value="19">TRIMURTI PUBLICITY AND MARKETING PVT.LTD.-Phulwari</option>
-                                                    <option value="20">AMAN ENTERPRISES-Lucknow</option>
-                                                    <option value="36">Galaxy Advertisers -Hardwar</option>
-                                                    <option value="42">The Concepts Advertising &amp; Marketing -Nawabganj </option>
-                                                    <option value="44">s.r. media Works-Basti</option>
-                                                    <option value="46">Rajesh Mangilal Verma -Lucknow</option>
-                                                    <option value="35">AFLUEX MULTISERVICES LLP-Lucknow</option>
-                                                    <option value="40">Surendra Advertising-NA</option>
-                                                    <option value="41">Surya Outdoor Advertising -Chandausi</option>
-                                                    <option value="45">maurya Advertising Service-Sagari</option>
-                                                    <option value="48">muskurado New delhi-New Delhi</option>
-                                                    <option value="37">Aanya Media Solution -Chandauli</option>
-                                                    <option value="38"> A D Media Publicity -Dehradun</option>
-                                                    <option value="47">simran Ad-Dhanbad</option>
-                                                    <option value="49">GOODWILL PLASTIC SIGN-New Delhi</option>
-                                                    <option value="50">M/s Srinagar Enterprises-Lucknow</option>
-                                                </select>
+                                                @Html.DropDownListFor(m => m.VendorID, new SelectList(ViewBag.ddlVendors, "Value", "Text"), new { @class = "form-select", @placeholder = "Select Vendor" })
+                                                
                                             </div>
                                         </div>
                                     </div>

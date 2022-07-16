@@ -896,9 +896,13 @@
                 //Bind DDLs to select the Previous filled Data for edit
 
                 //$('#SiteID').attr("disabled", "disabled");
+                debugger
                 $('#SaleOrderDetailsID').val(saleorderdetailsid);
                 $('#LineStatus').val(linestatus);
                 $('#HSNCode').val(response.HSNCode);
+               
+                $('#hdVendorName').val(response.VendorName);
+                $('#hdVendorID').val(response.VendorID);
                 $('#CityID').val(response.City);
                 $('#SiteID').val(response.SiteID);
                 $('#Description').val(response.Description);

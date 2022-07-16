@@ -294,7 +294,7 @@
                                                     foreach (var item in Model.lstSites)
                                                     {
                                                         <tr>
-                                                            <td>
+                                                            <td class="srno">
                                                                 @if (item.IsDummySite == "1")
                                                                 {
                                                                     <label>Yes</label>
@@ -304,7 +304,7 @@
                                                                     <label>No</label>
                                                                 }
                                                             </td>
-                                                            <td>@item.SiteName</td>
+                                                            <td class="siteName">@item.SiteName</td>
                                                             <td>@item.Pincode</td>
                                                             <td>@item.Facing</td>
                                                             <td>@item.Rational</td>
@@ -336,7 +336,7 @@
                                             }
                                             else
                                             {
-                                                <input type="submit" value="Save Site" class="btn btn-light" name="SaveSite" onclick="return validatesite()" />
+                                                <input type="submit" value="Save Site" class="btn btn-light" name="SaveSite" onclick="return validate()" />
                                                 <a href="/Master/SiteMaster" class="btn btn-dark">Reset</a>
                                             }
                                         </div>
@@ -390,6 +390,11 @@
     function validatesite() {
         $("#divload").css({ 'display': 'none' });
         $(".errortext").removeClass("errortext");
+        var arrRows = document.getElementById("example").getElementsByClassName("srno");
+        //if ($('input[type=checkbox]:checked').length == 0) {
+        //    alert("Please select at least one checkbox");
+        //    return false;
+        //}
         if ($('#VendorID').val() == '0') {
             $("#VendorID").addClass('errortext');
             $('#VendorID').focus();
@@ -448,7 +453,76 @@
         }
         $("#divload").css({ 'display': '' });
     }
+    function validate() {
+        $("#divload").css({ 'display': 'none' });
+        $(".errortext").removeClass("errortext");
+        var arrRows = document.getElementById("example").getElementsByClassName("srno");
+        //if ($('input[type=checkbox]:checked').length == 0) {
+        //    alert("Please select at least one checkbox");
+        //    return false;
+        //}
+        if ($('#VendorID').val() == '0') {
+            $("#VendorID").addClass('errortext');
+            $('#VendorID').focus();
+            return false;
+        }
+        if ($('#SiteName').val() == '') {
+            $("#SiteName").addClass('errortext');
+            $('#SiteName').focus();
+            return false;
+        }
+        if ($('#Pincode').val() == '') {
+            $("#Pincode").addClass('errortext');
+            $('#Pincode').focus();
+            return false;
+        }
+        if ($('#City').val() == '') {
+            $("#City").addClass('errortext');
+            $('#City').focus();
+            return false;
+        }
+        if ($('#Facing').val() == '') {
+            $("#Facing").addClass('errortext');
+            $('#Facing').focus();
+            return false;
+        }
+        if ($('#Side').val() == '') {
+            $("#Side").addClass('errortext');
+            $('#Side').focus();
+            return false;
 
+        }
+        if ($('#Quantity').val() == '') {
+            $("#Quantity").addClass('errortext');
+            $('#Quantity').focus();
+            return false;
+        }
+        if ($('#Width').val() == '') {
+            $("#Width").addClass('errortext');
+            $('#Width').focus();
+            return false;
+        }
+        if ($('#Height').val() == '') {
+            $("#Height").addClass('errortext');
+            $('#Height').focus();
+            return false;
+        }
+        if ($('#MediaVehicleID').val() == '0') {
+            $("#MediaVehicleID").addClass('errortext');
+            $('#MediaVehicleID').focus();
+            return false;
+        }
+        if ($('#MediaTypeID').val() == '0') {
+            $("#MediaTypeID").addClass('errortext');
+            $('#MediaTypeID').focus();
+            return false;
+        }
+        if (arrRows.length == 0) {
+            alert("Please Add Row in your site !!");
+            return false;
+        }
+        $("#divload").css({ 'display': '' });
+    }
     function getstatecity() {
 
         $.ajax({

@@ -693,7 +693,7 @@ namespace AfluexERP.Controllers
                         {
                             model.Result = "1";
                             model.ServiceType = dsMediaType.Tables[0].Rows[0]["DateFormat"].ToString();
-                            model.HSNCode = ds.Tables[0].Rows[0]["HsnCode"].ToString();
+                            model.HSNCode = dsMediaType.Tables[0].Rows[0]["HsnCode"].ToString();
                             //Bind Media Type according to the selected Service
                             List<SelectListItem> ddlmediaType = new List<SelectListItem>();
                             //DataSet dsMediaType = model.GetMediaType();
@@ -1061,6 +1061,7 @@ namespace AfluexERP.Controllers
                     model.Description = ds.Tables[0].Rows[0]["Description"].ToString();
                     model.ServiceID = ds.Tables[0].Rows[0]["FK_ServiceID"].ToString();
                     model.VendorID = ds.Tables[0].Rows[0]["FK_VendorID"].ToString();
+                    model.VendorName = ds.Tables[0].Rows[0]["VendorName"].ToString();
                     model.FromDate = ds.Tables[0].Rows[0]["FromDate"].ToString();
                     model.ToDate = ds.Tables[0].Rows[0]["ToDate"].ToString();
                     model.Width = ds.Tables[0].Rows[0]["Width"].ToString();
