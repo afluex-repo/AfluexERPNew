@@ -7,6 +7,12 @@
     .px-5 {
         margin-top: 21px;
     }
+    .ml-2{
+        margin-left:10px;
+    }
+    .errortext{
+        border:2px solid red;
+    }
 </style>
 @using (Html.BeginForm("GenerateSaleOrder", "SaleOrder", FormMethod.Post, new { @id = "signupForm", enctype = "multipart/form-data" }))
 {
@@ -51,14 +57,22 @@
             <div class="card-body">
                 <div class="p-4 border rounded">
                     <div class="row g-3">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="form-group row">
                                 <label class="index-1">Sale Order No </label>
-                                @Html.TextBoxFor(m => m.SalesOrderNo, new { @class = "form-control mb-3", @Placeholder = "Sale Order No" })
+                                @Html.TextBoxFor(m => m.SalesOrderNo, new { @class = "form-control mb-3", @Placeholder = "Sale Order No", @readonly="true" })
                             </div>
                         </div>
+                        <div class="col-md-3 ml-2">
+                            <div class="form-group row">
+                                <label class="index-1">Financial Year </label>
+                                @Html.DropDownListFor(m => m.FinancialYear, new SelectList(ViewBag.ddlFinancialYear, "Value", "Text"), new { @class = "form-control mb-3" })
+                            </div>
+                        </div>
+                        
                         <div class="col-md-4">
-                            <input type="submit" value="Generate Sale Order" class="btn btn-light px-5" name="Generate" onclick="return generatesaleorderno()" />
+                            @*<input type="submit" value="Generate Sale Order" class="btn btn-light px-5" name="Generate" onclick="return generatesaleorderno()"/>*@
+                            <input type="submit" value="Generate Sale Order" class="btn btn-light px-5" name="Generate" onclick="return Validate()"/>
                         </div>
                     </div>
                 </div>
@@ -128,3 +142,18 @@
     </div>
 }
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+
+<script>
+    function Validate()
+    {
+        $("#divload").css({ 'display': 'none' })
+        $(".errortext").removeClass("errortext");
+
+        if ($("#FinancialYear").val() == "0") {
+            $("#FinancialYear").addClass('errortext');
+            $("#FinancialYear").focus();
+            return false;
+        }
+    }
+</script>
