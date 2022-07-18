@@ -209,6 +209,6 @@ F:\Ashwani Afluex\repository\AfluexERPNew\AfluexERP\bin\Newtonsoft.Json.xml
 F:\Ashwani Afluex\repository\AfluexERPNew\AfluexERP\bin\System.Net.Http.Formatting.xml
 F:\Ashwani Afluex\repository\AfluexERPNew\AfluexERP\bin\System.Web.Http.xml
 F:\Ashwani Afluex\repository\AfluexERPNew\AfluexERP\bin\System.Web.Http.WebHost.xml
+F:\Ashwani Afluex\repository\AfluexERPNew\AfluexERP\obj\Debug\AfluexERP.csprojResolveAssemblyReference.cache
 F:\Ashwani Afluex\repository\AfluexERPNew\AfluexERP\obj\Debug\AfluexERP.dll
 F:\Ashwani Afluex\repository\AfluexERPNew\AfluexERP\obj\Debug\AfluexERP.pdb
-F:\Ashwani Afluex\repository\AfluexERPNew\AfluexERP\obj\Debug\AfluexERP.csprojResolveAssemblyReference.cache

@@ -106,9 +106,9 @@ namespace AfluexERP.Controllers
         [HttpPost]
         [ActionName("POList")]
         [OnAction(ButtonName = "Generate")]
-        public ActionResult GeneratePONO()
+        public ActionResult GeneratePONO(PO model)
         {
-            PO model = new PO();
+            //PO model = new PO();
             model.AddedBy = Session["UserID"].ToString();
 
             #region ddlFinancialYear
