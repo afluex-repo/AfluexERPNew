@@ -91,7 +91,7 @@ namespace AfluexERP.Models
         public DataSet GeneratePurchaseOrderNo()
         {
             SqlParameter[] para = { new SqlParameter("@AddedBy", AddedBy),
-                                    new SqlParameter("@FinancialYearName", FinancialYear) };
+                                     new SqlParameter("@FinancialYearName", FinancialYear),};
             DataSet ds = DBHelper.ExecuteQuery("GeneratePurchaseOrderNo", para);
             return ds;
         }
