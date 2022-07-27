@@ -475,6 +475,8 @@ namespace AfluexERP.Controllers
             {
                 ViewBag.saverrormsg = "none";
             }
+
+            Master obj = new Master();
             #region BindVendor
             Common objcomm = new Common();
             List<SelectListItem> ddlVendors = new List<SelectListItem>();
@@ -537,6 +539,27 @@ namespace AfluexERP.Controllers
 
             ViewBag.ddlMediaType = ddlMediaType;
             #endregion BindMediaType
+
+            //#region City
+
+            //List<SelectListItem> ddlCity = new List<SelectListItem>();
+            //DataSet ds = obj.GetCity();
+            //if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            //{
+            //    int count = 0;
+            //    foreach (DataRow r in ds.Tables[0].Rows)
+            //    {
+            //        if (count == 0)
+            //        {
+            //            ddlCity.Add(new SelectListItem { Text = "Select", Value = "0" });
+            //        }
+            //        ddlCity.Add(new SelectListItem { Text = r["Taluk"].ToString(), Value = r["Taluk"].ToString() });
+            //        count++;
+            //    }
+            //}
+
+            //ViewBag.ddlCity = ddlCity;
+            //#endregion
             return View();
         }
         [HttpPost]
@@ -610,7 +633,26 @@ namespace AfluexERP.Controllers
 
             ViewBag.ddlMediaType = ddlMediaType;
             #endregion BindMediaType
+            //#region City
 
+            //List<SelectListItem> ddlCity = new List<SelectListItem>();
+            //DataSet dscty = objmaster.GetCity();
+            //if (dscty != null && dscty.Tables.Count > 0 && dscty.Tables[0].Rows.Count > 0)
+            //{
+            //    int count = 0;
+            //    foreach (DataRow r in dscty.Tables[0].Rows)
+            //    {
+            //        if (count == 0)
+            //        {
+            //            ddlCity.Add(new SelectListItem { Text = "Select", Value = "0" });
+            //        }
+            //        ddlCity.Add(new SelectListItem { Text = r["Taluk"].ToString(), Value = r["Taluk"].ToString() });
+            //        count++;
+            //    }
+            //}
+
+            //ViewBag.ddlCity = ddlCity;
+            //#endregion
             List<Master> lst = new List<Master>();
             objmaster.MediaTypeID = objmaster.MediaTypeID == "0" ? null : objmaster.MediaTypeID;
             objmaster.MediaVehicleID = objmaster.MediaVehicleID == "0" ? null : objmaster.MediaVehicleID;
