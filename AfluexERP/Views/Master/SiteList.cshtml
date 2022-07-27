@@ -131,6 +131,20 @@
                                             </div>
                                         </div>
                                     </div>
+
+
+
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <label class="control-label">City </label>
+                                                @Html.TextBoxFor(m=>m.City, new { @class = "form-control", @placeholder = "City" })
+                                                @*@Html.DropDownListFor(m => m.City, new SelectList(ViewBag.ddlCity, "Value", "Text"), new { @class = "form-select", @placeholder = "City" })*@
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                     <div class="col-md-4">
                                         <div class="form-group row">
                                             <div class="col-md-12">
@@ -234,7 +248,4 @@
         </div>
     </div>
 </div>
-
-
-
 

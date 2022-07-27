@@ -16,7 +16,8 @@ namespace AfluexERP.Models
         {
             try
             {
-                connectionString = "Data Source=103.48.51.111,1232;Initial Catalog=afluexerp;User Id=afluexerpuser;Password=afluex@*712;Integrated Security=false;";
+                //connectionString = "Data Source=103.48.51.111,1232;Initial Catalog=afluexerp;User Id=afluexerpuser;Password=afluex@*712;Integrated Security=false;";
+                connectionString = "Data Source=103.48.51.111,1232;Initial Catalog=afluexerptestdb;User Id=afluexerpuser;Password=afluex@*712;Integrated Security=false;";
             }
             catch (Exception)
             {

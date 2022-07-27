@@ -96,6 +96,7 @@ namespace AfluexERP.Models
                                  new SqlParameter("@MediaVehicleId",MediaVehicleID),
                                   new SqlParameter("@VendorID",VendorID),
                                    new SqlParameter("@SiteID",SiteID),
+                                   new SqlParameter("@City",City),
                                  };
             DataSet ds = DBHelper.ExecuteQuery("GetAllSiteList", para);
             return ds;
@@ -267,6 +268,16 @@ namespace AfluexERP.Models
             DataSet ds = DBHelper.ExecuteQuery("DeleteCompany", Para);
             return
                 ds;
+        }
+
+        public DataSet GetCity()
+        {
+            //SqlParameter[] para =
+            //{
+            //    new SqlParameter("@Taluk",City)
+            //};
+            DataSet ds = DBHelper.ExecuteQuery("GetCity");
+            return ds;
         }
     }
 }
